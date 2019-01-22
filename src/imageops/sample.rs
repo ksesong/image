@@ -141,7 +141,8 @@ where
     let ratio = width as f32 / new_width as f32;
     let sratio = if ratio < 1.0 { 1.0 } else { ratio };
     let src_support = filter.support * sratio;
-
+    println!("width: {} new_width: {}", width, new_width);
+    
     for outx in 0..new_width {
         // Find the point in the input image corresponding to the centre
         // of the current pixel in the output image.
@@ -162,7 +163,7 @@ where
             <i64 as From<_>>::from(left) + 1,
             <i64 as From<_>>::from(width),
         ) as u32;
-        println!("{}- {}{}", outx, left, right);
+        println!("{}- left: {} right: {}", outx, left, right);
 
         // Go back to left boundary of pixel, to properly compare with i
         // below, as the kernel treats the centre of a pixel as 0.
