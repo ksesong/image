@@ -162,6 +162,7 @@ where
             <i64 as From<_>>::from(left) + 1,
             <i64 as From<_>>::from(width),
         ) as u32;
+        println!("{}- {}{}", outx, left, right);
 
         // Go back to left boundary of pixel, to properly compare with i
         // below, as the kernel treats the centre of a pixel as 0.
