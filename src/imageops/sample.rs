@@ -173,7 +173,7 @@ where
         let mut sum = 0.0;
         for i in left..right {
             let w = (filter.kernel)((i as f32 - inputx) / sratio);
-            println!("i: {}- kernel: {}", (filter.kernel)((i as f32 - inputx) / sratio));
+            println!("i: {}- kernel: {}", i, (filter.kernel)((i as f32 - inputx) / sratio));
             ws.push(w);
             sum += w;
         }
