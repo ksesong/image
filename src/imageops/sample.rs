@@ -251,6 +251,7 @@ where
             <i64 as From<_>>::from(left) + 1,
             <i64 as From<_>>::from(height),
         ) as u32;
+        println!("{}- top: {} bottom: {}", outx, left, right);
 
         let inputy = inputy - 0.5;
 
